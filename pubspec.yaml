@@ -1,0 +1,39 @@
+name: multi_tools_app
+description: A simple multi tools Android app with AdMob
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # UI & Localization
+  flutter_localizations:
+    sdk: flutter
+  intl: ^0.18.1
+
+  # AdMob
+  google_mobile_ads: ^5.0.0
+
+  # Utilities
+  math_expressions: ^2.4.0
+  shared_preferences: ^2.2.2
+  qr_flutter: ^4.1.0
+  mobile_scanner: ^3.5.5
+  flashlight: ^0.1.1
+  url_launcher: ^6.2.5
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    
