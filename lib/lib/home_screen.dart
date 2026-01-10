@@ -23,16 +23,30 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
-  Widget toolCard(BuildContext context, String title) {
-    return Card(
+  Widget toolCard(
+  BuildContext context,
+  String title,
+  IconData icon,
+  VoidCallback onTap,
+) {
+  return InkWell(
+    onTap: onTap,
+    child: Card(
       elevation: 4,
-      child: Center(
-        child: Text(
-          title,
-          textAlign: TextAlign.center,
-          style: const TextStyle(fontSize: 16),
-        ),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Icon(icon, size: 40),
+          const SizedBox(height: 8),
+          Text(
+            title,
+            textAlign: TextAlign.center,
+            style: const TextStyle(fontSize: 16),
+          ),
+        ],
       ),
-    );
-  }
+    ),
+  );
 }
+
+
