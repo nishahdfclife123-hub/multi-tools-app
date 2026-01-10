@@ -29,13 +29,17 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
   }
 
   String _calculate(String exp) {
-    // very basic calculator logic
+  try {
+    // demo purpose calculator (safe)
     final expression = exp.replaceAll('×', '*').replaceAll('÷', '/');
-    final parsed = double.parse(
-      expression.split(RegExp(r'[+\-*/]')).reduce((a, b) => a),
-    );
-    return parsed.toString();
+
+    if (expression.isEmpty) return '0';
+
+    return expression;
+  } catch (e) {
+    return 'Error';
   }
+}
 
   Widget buildButton(String text) {
     return Expanded(
