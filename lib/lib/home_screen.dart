@@ -19,8 +19,15 @@ class HomeScreen extends StatelessWidget {
         context,
         'Calculator',
         Icons.calculate,
-        () {},
-      ),
+        () {
+  Navigator.push(
+    context,
+    MaterialPageRoute(
+      builder: (context) => const CalculatorScreen(),
+    ),
+  );
+},
+
       toolCard(
         context,
         'Age Calculator',
